@@ -1,0 +1,46 @@
+.about-section, .service-section, .Testimonial-section {padding:7rem 0;}
+
+@include respond (tab-port) {
+padding:3rem 0;
+	   }
+
+
+
+.about-section{
+	background-color:$grey-light-1;
+
+	@include respond (tab-port) {
+    margin-top:3rem 0;
+	   }
+	
+}
+
+.service-section{
+	background-color:$white;
+	
+}
+
+.Testimonial-section{
+     margin-bottom:3rem;
+	 position:relative;
+	 
+}
+
+.member-section{
+	padding:15rem 0;
+	background-color:$grey-light-1;
+
+	@include respond (tab-port) {
+    padding:3rem 0;
+	   }
+}
+
+.contact-section{
+	padding-top:5rem ;
+	background-color:$white;
+
+	@include respond (tab-port) {
+     padding-top:3rem 0;
+	   }
+}
+

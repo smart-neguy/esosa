@@ -1,0 +1,113 @@
+.testimonial{
+        width:40%;
+        background-color:rgba($white,.6);
+        box-shadow:0 3rem 6rem rgba($black,.1);
+        display:inline-block;
+        border-radius:2rem;
+        overflow:hidden;
+        //padding:2.5rem;
+         
+
+         @include respond (tab-port) {
+	   width:90%;}
+
+
+
+&__shape{
+	width:10rem;
+	height:10rem;
+	float:left;
+	position:relative;
+
+    
+
+
+    @supports ((-webkit-shape-outside:circle()) or (shape-outside:circle())){
+
+        width:15rem;
+	height:15rem;
+	-webkit-clip-path:circle(80% at 3% 8% );
+	clip-path:circle(80% at 3% 8% );
+	-webkit-shape-outside:circle(85% at 3% 8% );
+	shape-outside:circle(85% at 3% 8% );
+	position:relative;
+
+    transform:translate(-3rem);
+
+    }
+
+}
+
+&__image{
+	height:100%;
+	transform: scale(1.7);
+	transition:all 1s;
+
+	 @include respond (tab-port) {
+	    filter:blur(.1rem) brightness(60%);}
+
+}
+&:hover &__image{
+        transform:scale(1.4);
+        filter:blur(.3rem) brightness(80%);
+
+
+	
+}
+
+&__paragraph{
+	font-size:1rem;
+}
+
+&__text{
+	font-size:2rem;
+}
+
+&__caption{
+	position:absolute;
+	top:50%;
+	@include center-object;
+	color:$white;
+	text-transform:upper-case;
+	font-size:1.5;
+	opacity:0;
+	trasition:all .5s;
+
+	@include respond (tab-port) {
+	   opacity:1;}
+}
+&:hover &__caption{
+        opacity:1;
+        transform:translate(-50%, -80%);
+	
+}
+
+
+&--1{
+	float:left;
+	margin-left:5rem;
+
+
+	 @include respond (tab-port) {
+	  margin-left:0;
+	  float:none;
+	  }
+
+}
+
+&--2{
+	float:right;
+	margin-top:10rem;
+	margin-right:5rem;
+
+	 @include respond (tab-port) {
+	  margin-right:0;
+	  margin-top:1rem;
+	  float:none;
+	  }
+
+	
+}
+
+
+}
